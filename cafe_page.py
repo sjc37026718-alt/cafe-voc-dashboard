@@ -98,7 +98,7 @@ with st.sidebar:
     owner_pw = st.text_input("비밀번호", type="password", placeholder="비밀번호를 입력하세요")
     if owner_pw == "1234":
         st.success("인증 완료!")
-        st.markdown("[📊 VoC 대시보드 열기](http://localhost:8501)", unsafe_allow_html=True)
+        st.markdown("[📊 VoC 대시보드 열기](https://cafe-voc-dashboard-hb9atextc7ta3ffxzxp7uj.streamlit.app/)", unsafe_allow_html=True)
     elif owner_pw:
         st.error("비밀번호가 틀립니다.")
 

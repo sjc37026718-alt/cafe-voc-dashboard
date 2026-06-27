@@ -56,8 +56,12 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-if st.button("🔄 새로고침"):
-    st.cache_data.clear()
+col_refresh, col_cafe = st.columns([1, 1])
+with col_refresh:
+    if st.button("🔄 새로고침"):
+        st.cache_data.clear()
+with col_cafe:
+    st.markdown("[☕ 카페 페이지로 돌아가기](https://cafe-voc-dashboard-mbdonsrpkoap8tzvfhbtuy.streamlit.app/)")
 
 data = load_feedbacks()
 df = pd.DataFrame(data)
